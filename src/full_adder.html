@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Full Adder</title>
+  <link rel="stylesheet" href="computer.css"/>
+</head>
+<body>
+  <style>
+    #A:not(:checked) ~ div.cc-container .cc.A,
+    #A:checked ~ div.cc-container .cc.not-A,
+    #B:not(:checked) ~ div.cc-container .cc.B,
+    #B:checked ~ div.cc-container .cc.not-B,
+    #S:not(:checked) ~ div.cc-container .cc.S,
+    #S:checked ~ div.cc-container .cc.not-S {
+      width: 0;
+    }
+    #A:not(:checked) ~ div.cc-container .cc.not-A,
+    #A:checked ~ div.cc-container .cc.A,
+    #B:not(:checked) ~ div.cc-container .cc.not-B,
+    #B:checked ~ div.cc-container .cc.B,
+    #S:not(:checked) ~ div.cc-container .cc.not-S,
+    #S:checked ~ div.cc-container .cc.S {
+      width: 10px;
+    }
+  </style>
+
+  A = <input id="A" class="cc-switch" type="checkbox">
+
+  <br/>
+
+  B = <input id="B" class="cc-switch" type="checkbox">
+
+  <br/>
+
+  S = <input id="S" class="cc-switch" type="checkbox">
+
+  <hr/>
+
+  A+B+S = A^B^S =
+  <div class="cc-container">
+    <i class="cc-and">
+      <i class="cc-or">
+        <i class="cc-and">
+          <i class="cc-or">
+            <i class="cc A"></i>
+            <i class="cc B"></i>
+          </i>
+          <i class="cc-or">
+            <i class="cc not-A"></i>
+            <i class="cc not-B"></i>
+          </i>
+        </i>
+        <i class="cc S"></i>
+      </i>
+      <i class="cc-or">
+        <i class="cc-and">
+          <i class="cc A"></i>
+          <i class="cc B"></i>
+        </i>
+        <i class="cc-and">
+          <i class="cc not-A"></i>
+          <i class="cc not-B"></i>
+        </i>
+        <i class="cc not-S"></i>
+      </i>
+    </i>
+  </div>
+
+  <br/>
+
+  carry =
+  <div class="cc-container">
+    <i class="cc-or">
+      <i class="cc-and">
+        <i class="cc A"></i>
+        <i class="cc B"></i>
+      </i>
+      <i class="cc-and">
+        <i class="cc-or">
+          <i class="cc A"></i>
+          <i class="cc B"></i>
+        </i>
+        <i class="cc S"></i>
+      </i>
+    </i>
+  </div>
+
+</body>
+</html>

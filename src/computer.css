@@ -1,0 +1,64 @@
+body {
+  font-size: 15px;
+  font-family: 'Consolas', monospace;
+}
+
+input.cc-switch[type=checkbox] {
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: blue;
+}
+input.cc-switch[type=checkbox]:not(:checked):before {
+  content: "０";
+  font-size: 10px;
+  line-height: 10px;
+  font-style: normal;
+}
+input.cc-switch[type=checkbox]:checked:before {
+  content: "１";
+  font-size: 10px;
+  line-height: 10px;
+  font-style: normal;
+}
+
+.cc-container {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.cc-container:after {
+  content: "０";
+  position: absolute;
+  height: 10px;
+  font-size: 10px;
+  line-height: 14px;
+  font-style: normal;
+}
+.cc, .cc-and, .cc-or {
+  position: relative;
+  display: inline-block;
+  max-width: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+.cc:after {
+  content: "１";
+  position: absolute;
+  height: 10px;
+  font-size: 10px;
+  line-height: 14px;
+  font-style: normal;
+}
+.cc-and > *:first-child {
+  margin-left: -10px;
+}
