@@ -10,7 +10,7 @@
 Using elements to represent bits, styles to represent status, and cascading.
 
 ## Why
-For fun and for <3.
+For fun and <3.
 
 ## About
 2015, Shu Ding <ds303077135@gmail.com>, MIT licensed.
